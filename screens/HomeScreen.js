@@ -29,7 +29,6 @@ class HomeScreen extends Component {
 
     }
     getAsteroidData = () => {
-        console.log("AISS::::", this.state.asteroidId)
         fetch("https://api.nasa.gov/neo/rest/v1/neo/" + this.state.asteroidId + "?api_key=" + API_KEY)
             .then(res => res.json())
             .then(resJson => {
